@@ -9,6 +9,8 @@ import 'screens/activity_two_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/network_monitor_screen.dart';
 import 'screens/network_diagnostic_screen.dart';
+import 'providers/local_mesh_chat_provider.dart';
+import 'screens/local_mesh_chat_screen.dart';
 
 void main() {
   runApp(const PortfolioApp());
@@ -25,6 +27,7 @@ class PortfolioApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AppStateProvider()),
         ChangeNotifierProvider(create: (_) => NetworkMonitorProvider()),
         ChangeNotifierProvider(create: (_) => NetworkDiagnosticProvider()),
+        ChangeNotifierProvider(create: (_) => LocalMeshChatProvider()),
       ],
       child: Consumer<AppStateProvider>(
         builder: (context, appState, _) {
@@ -52,6 +55,7 @@ class PortfolioApp extends StatelessWidget {
               SettingsScreen.routeName: (_) => const SettingsScreen(),
               NetworkMonitorScreen.routeName: (_) => const NetworkMonitorScreen(),
               NetworkDiagnosticScreen.routeName: (_) => const NetworkDiagnosticScreen(),
+              LocalMeshChatScreen.routeName: (_) => const LocalMeshChatScreen(),
             },
           );
         },

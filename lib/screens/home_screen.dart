@@ -47,6 +47,13 @@ class HomeScreen extends StatelessWidget {
           routeName: '/settings',
           color: Colors.deepOrange,
         ),
+        const ActivityItem(
+          title: 'Local Mesh Chat',
+          subtitle: 'Offline P2P messaging',
+          icon: Icons.hub_outlined,
+          routeName: '/local-mesh-chat',
+          color: Colors.pinkAccent,
+        ),
       ];
 
   @override
