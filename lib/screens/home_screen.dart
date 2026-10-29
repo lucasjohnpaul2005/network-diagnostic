@@ -54,6 +54,13 @@ class HomeScreen extends StatelessWidget {
           routeName: '/local-mesh-chat',
           color: Colors.pinkAccent,
         ),
+        const ActivityItem(
+          title: 'Activity 5',
+          subtitle: 'Geofence map tracker',
+          icon: Icons.map_outlined,
+          routeName: '/geofence-map',
+          color: Colors.green,
+        ),
       ];
 
   @override

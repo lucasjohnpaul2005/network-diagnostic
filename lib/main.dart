@@ -11,6 +11,12 @@ import 'screens/network_monitor_screen.dart';
 import 'screens/network_diagnostic_screen.dart';
 import 'providers/local_mesh_chat_provider.dart';
 import 'screens/local_mesh_chat_screen.dart';
+import 'providers/geofence_provider.dart';
+import 'screens/geofence_map_screen.dart'; 
+
+
+
+
 
 void main() {
   runApp(const PortfolioApp());
@@ -28,6 +34,7 @@ class PortfolioApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => NetworkMonitorProvider()),
         ChangeNotifierProvider(create: (_) => NetworkDiagnosticProvider()),
         ChangeNotifierProvider(create: (_) => LocalMeshChatProvider()),
+        ChangeNotifierProvider(create: (_) => GeofenceProvider()),
       ],
       child: Consumer<AppStateProvider>(
         builder: (context, appState, _) {
@@ -56,6 +63,7 @@ class PortfolioApp extends StatelessWidget {
               NetworkMonitorScreen.routeName: (_) => const NetworkMonitorScreen(),
               NetworkDiagnosticScreen.routeName: (_) => const NetworkDiagnosticScreen(),
               LocalMeshChatScreen.routeName: (_) => const LocalMeshChatScreen(),
+              GeofenceMapScreen.routeName: (_) => const GeofenceMapScreen(),
             },
           );
         },
